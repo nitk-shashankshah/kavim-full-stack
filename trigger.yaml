@@ -70,14 +70,11 @@ stages:
     displayName: Deploy
     dependsOn: Build
     jobs:
-      - deployment: DeployToAKS
+      - job: DeployToAKS
         displayName: Deploy to AKS
-        strategy:
-          runOnce:
-            deploy:
-              steps:
-                - task: AzureCLI@2
-                  displayName: 'Configure kubectl and apply manifests'
+        steps:
+          - task: AzureCLI@2
+            displayName: 'Configure kubectl and apply manifests'
                   inputs:
                     azureSubscription: $(azureSubscription)
                     scriptType: bash
