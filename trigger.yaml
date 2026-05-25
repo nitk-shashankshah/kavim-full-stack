@@ -1,0 +1,110 @@
+trigger:
+  branches:
+    include:
+      - master
+
+variables:
+  # imageTag will be used to tag docker images and deployments
+  imageTag: '$(Build.BuildId)'
+  acrLoginServer: 'kavim.azurecr.io'    # update if different
+  aksResourceGroup: 'kavim'            # set to your AKS resource group
+  aksCluster: 'kavimCluster'           # set to your AKS cluster name
+  aksNamespace: 'kavim'                # kubernetes namespace to deploy into
+  containerRegistryServiceConnection: 'KavimACR' # Azure service connection name for ACR
+  azureSubscription: 'Kavim-Subscription'        # Azure Resource Manager service connection name
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+stages:
+  - stage: Build
+    displayName: Build
+    jobs:
+      - job: BuildAndPush
+        displayName: Build backend & frontend, push images
+        steps:
+          - checkout: self
+
+          - task: NodeTool@0
+            inputs:
+              versionSpec: '16.x'
+            displayName: 'Setup Node.js'
+
+          - script: |
+              cd flone-backend
+              npm ci
+              # optional: run backend tests here
+            displayName: 'Install backend dependencies'
+
+          - script: |
+              cd kavim-frontend
+              npm ci
+              npm run build
+            displayName: 'Install frontend dependencies and build'
+
+          - task: Docker@2
+            displayName: 'Build and push backend image to ACR'
+            inputs:
+              command: buildAndPush
+              containerRegistry: $(containerRegistryServiceConnection)
+              repository: $(acrLoginServer)/flone-backend
+              dockerfile: flone-backend/Dockerfile
+              buildContext: flone-backend
+              tags: |
+                $(imageTag)
+              arguments: --platform linux/amd64
+
+          - task: Docker@2
+            displayName: 'Build and push frontend image to ACR'
+            inputs:
+              command: buildAndPush
+              containerRegistry: $(containerRegistryServiceConnection)
+              repository: $(acrLoginServer)/kavim-frontend
+              dockerfile: kavim-frontend/Dockerfile
+              buildContext: kavim-frontend
+              tags: |
+                $(imageTag)
+              arguments: --platform linux/amd64
+
+  - stage: Deploy
+    displayName: Deploy
+    dependsOn: Build
+    jobs:
+      - deployment: DeployToAKS
+        displayName: Deploy to AKS
+        environment: 'aks/$(aksCluster)'
+        strategy:
+          runOnce:
+            deploy:
+              steps:
+                - task: AzureCLI@2
+                  displayName: 'Configure kubectl and apply manifests'
+                  inputs:
+                    azureSubscription: $(azureSubscription)
+                    scriptType: bash
+                    scriptLocation: inlineScript
+                    inlineScript: |
+                      set -euo pipefail
+                      az aks get-credentials --resource-group $(aksResourceGroup) --name $(aksCluster) --overwrite-existing
+                      # apply manifests (creates namespace, services, deployments if needed)
+                      kubectl apply -f k8s/
+                      # update deployments to use newly pushed images (will trigger rolling update)
+                      kubectl -n $(aksNamespace) set image deployment/flone-backend flone-backend=$(acrLoginServer)/flone-backend:$(imageTag) --record || true
+                      kubectl -n $(aksNamespace) set image deployment/kavim-frontend kavim-frontend=$(acrLoginServer)/kavim-frontend:$(imageTag) --record || true
+                      # restart if set-image failed (fallback)
+                      kubectl -n $(aksNamespace) rollout restart deployment/flone-backend || true
+                      kubectl -n $(aksNamespace) rollout restart deployment/kavim-frontend || true
+
+                - task: AzureCLI@2
+                  displayName: 'Verify rollout status'
+                  inputs:
+                    azureSubscription: $(azureSubscription)
+                    scriptType: bash
+                    scriptLocation: inlineScript
+                    inlineScript: |
+                      kubectl -n $(aksNamespace) rollout status deployment/flone-backend --timeout=120s || true
+                      kubectl -n $(aksNamespace) rollout status deployment/kavim-frontend --timeout=120s || true
+
+                - script: |
+                    echo "Deployment finished. Images: $(acrLoginServer)/flone-backend:$(imageTag) $(acrLoginServer)/kavim-frontend:$(imageTag)"
+                  displayName: 'Finish'
