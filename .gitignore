@@ -1,0 +1,101 @@
+# Dependencies
+node_modules/
+package-lock.json
+pnpm-lock.yaml
+yarn.lock
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+.env.production
+
+# Build outputs
+build/
+dist/
+out/
+*.bundle.js
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Runtime data
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage
+coverage/
+.nyc_output/
+
+# IDE / Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+*.sublime-project
+*.sublime-workspace
+.code-workspace
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+desktop.ini
+
+# Kubernetes / Secrets
+k8s/*secret*.yaml
+!k8s/backend-secret.example.yaml
+*.key
+*.crt
+
+# Docker
+.docker/
+docker-compose.override.yml
+
+# Node REPL history
+.node_repl_history
+
+# Temporary files
+*.tmp
+.cache/
+temp/
+tmp/
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+
+# Misc
+.env.test
+.cache
+.parcel-cache
+.next
+out
+dist
+.vercel
+.nox/
+.tox/
+
+# Frontend build artifacts (both projects)
+flone/build/
+flone/.cache/
+kavim-frontend/build/
+kavim-frontend/.cache/
+
+# Backend uploads or generated files (if any)
+flone-backend/uploads/
+flone-backend/tmp/

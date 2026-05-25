@@ -1,0 +1,40 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: flone-backend
+  namespace: kavim
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: flone-backend
+  template:
+    metadata:
+      labels:
+        app: flone-backend
+    spec:
+      imagePullSecrets:
+        - name: acr-secret
+      containers:
+        - name: flone-backend
+          image: kavim.azurecr.io/flone-backend:latest
+          ports:
+            - containerPort: 5000
+          envFrom:
+            - configMapRef:
+                name: flone-backend-config
+            - secretRef:
+                name: flone-backend-secret
+          readinessProbe:
+            httpGet:
+              path: /health
+              port: 5000
+            initialDelaySeconds: 10
+            periodSeconds: 10
+          resources:
+            requests:
+              cpu: 100m
+              memory: 128Mi
+            limits:
+              cpu: 500m
+              memory: 512Mi
