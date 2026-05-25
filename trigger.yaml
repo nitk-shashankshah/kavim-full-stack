@@ -75,11 +75,11 @@ stages:
         steps:
           - task: AzureCLI@2
             displayName: 'Configure kubectl and apply manifests'
-                  inputs:
-                    azureSubscription: $(azureSubscription)
-                    scriptType: bash
-                    scriptLocation: inlineScript
-                    inlineScript: |
+            inputs:
+              azureSubscription: $(azureSubscription)
+              scriptType: bash
+              scriptLocation: inlineScript
+              inlineScript: |
                       set -euo pipefail
                       az aks get-credentials --resource-group $(aksResourceGroup) --name $(aksCluster) --overwrite-existing
                       # apply manifests (creates namespace, services, deployments if needed)
@@ -91,16 +91,16 @@ stages:
                       kubectl -n $(aksNamespace) rollout restart deployment/flone-backend || true
                       kubectl -n $(aksNamespace) rollout restart deployment/kavim-frontend || true
 
-                - task: AzureCLI@2
-                  displayName: 'Verify rollout status'
-                  inputs:
-                    azureSubscription: $(azureSubscription)
-                    scriptType: bash
-                    scriptLocation: inlineScript
-                    inlineScript: |
+          - task: AzureCLI@2
+            displayName: 'Verify rollout status'
+            inputs:
+              azureSubscription: $(azureSubscription)
+              scriptType: bash
+              scriptLocation: inlineScript
+              inlineScript: |
                       kubectl -n $(aksNamespace) rollout status deployment/flone-backend --timeout=120s || true
                       kubectl -n $(aksNamespace) rollout status deployment/kavim-frontend --timeout=120s || true
 
-                - script: |
+          - script: |
                     echo "Deployment finished. Images: $(acrLoginServer)/flone-backend:$(imageTag) $(acrLoginServer)/kavim-frontend:$(imageTag)"
-                  displayName: 'Finish'
+            displayName: 'Finish'
