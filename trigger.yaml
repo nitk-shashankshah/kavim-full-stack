@@ -10,7 +10,6 @@ variables:
   aksResourceGroup: 'kavim'            # set to your AKS resource group
   aksCluster: 'kavimCluster'           # set to your AKS cluster name
   aksNamespace: 'kavim'                # kubernetes namespace to deploy into
-  containerRegistryServiceConnection: 'KavimACR' # Azure service connection name for ACR
   azureSubscription: 'Kavim-Subscription'        # Azure Resource Manager service connection name
 
 pool:
@@ -42,29 +41,31 @@ stages:
               npm run build
             displayName: 'Install frontend dependencies and build'
 
-          - task: Docker@2
-            displayName: 'Build and push backend image to ACR'
+          - task: AzureCLI@2
+            displayName: 'Login to ACR and push backend image'
             inputs:
-              command: buildAndPush
-              containerRegistry: $(containerRegistryServiceConnection)
-              repository: $(acrLoginServer)/flone-backend
-              dockerfile: flone-backend/Dockerfile
-              buildContext: flone-backend
-              tags: |
-                $(imageTag)
-              arguments: --platform linux/amd64
+              azureSubscription: $(azureSubscription)
+              scriptType: bash
+              scriptLocation: inlineScript
+              inlineScript: |
+                set -euo pipefail
+                ACR_NAME=$(echo "$(acrLoginServer)" | cut -d'.' -f1)
+                az acr login --name "$ACR_NAME"
+                docker build --platform linux/amd64 -t $(acrLoginServer)/flone-backend:$(imageTag) -f flone-backend/Dockerfile flone-backend
+                docker push $(acrLoginServer)/flone-backend:$(imageTag)
 
-          - task: Docker@2
-            displayName: 'Build and push frontend image to ACR'
+          - task: AzureCLI@2
+            displayName: 'Login to ACR and push frontend image'
             inputs:
-              command: buildAndPush
-              containerRegistry: $(containerRegistryServiceConnection)
-              repository: $(acrLoginServer)/kavim-frontend
-              dockerfile: kavim-frontend/Dockerfile
-              buildContext: kavim-frontend
-              tags: |
-                $(imageTag)
-              arguments: --platform linux/amd64
+              azureSubscription: $(azureSubscription)
+              scriptType: bash
+              scriptLocation: inlineScript
+              inlineScript: |
+                set -euo pipefail
+                ACR_NAME=$(echo "$(acrLoginServer)" | cut -d'.' -f1)
+                az acr login --name "$ACR_NAME"
+                docker build --platform linux/amd64 -t $(acrLoginServer)/kavim-frontend:$(imageTag) -f kavim-frontend/Dockerfile kavim-frontend
+                docker push $(acrLoginServer)/kavim-frontend:$(imageTag)
 
   - stage: Deploy
     displayName: Deploy
