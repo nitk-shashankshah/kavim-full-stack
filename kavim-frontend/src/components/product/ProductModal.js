@@ -15,14 +15,20 @@ function ProductModal({ product, currency, discountedPrice, finalProductPrice, f
   const dispatch = useDispatch();
   const { cartItems } = useSelector((state) => state.cart);
 
+  const hasVariation = product && Array.isArray(product.variation) && product.variation.length > 0;
+  const firstVariation = hasVariation ? product.variation[0] : null;
+  const firstSize = firstVariation && Array.isArray(firstVariation.size) && firstVariation.size.length > 0
+    ? firstVariation.size[0]
+    : null;
+
   const [selectedProductColor, setSelectedProductColor] = useState(
-    product.variation ? product.variation[0].color : ""
+    firstVariation ? firstVariation.color || "" : ""
   );
   const [selectedProductSize, setSelectedProductSize] = useState(
-    product.variation ? product.variation[0].size[0].name : ""
+    firstSize ? firstSize.name || "" : ""
   );
   const [productStock, setProductStock] = useState(
-    product.variation ? product.variation[0].size[0].stock : product.stock
+    firstSize ? firstSize.stock : (product && product.stock) || 0
   );
   const [quantityCount, setQuantityCount] = useState(1);
   const productCartQty = getProductCartQuantity(
@@ -155,11 +161,11 @@ function ProductModal({ product, currency, discountedPrice, finalProductPrice, f
                                 : ""
                             }
                             onChange={() => {
-                              setSelectedProductColor(single.color);
-                              setSelectedProductSize(single.size[0].name);
-                              setProductStock(single.size[0].stock);
-                              setQuantityCount(1);
-                            }}
+                                setSelectedProductColor(single.color);
+                                setSelectedProductSize(single.size && single.size[0] ? single.size[0].name : "");
+                                setProductStock(single.size && single.size[0] ? single.size[0].stock : product.stock);
+                                setQuantityCount(1);
+                              }}
                           />
                           <span className="checkmark"></span>
                         </label>
@@ -173,7 +179,7 @@ function ProductModal({ product, currency, discountedPrice, finalProductPrice, f
                     {product.variation &&
                       product.variation.map(single => {
                         return single.color === selectedProductColor
-                          ? single.size.map((singleSize, key) => {
+                          ? (single.size || []).map((singleSize, key) => {
                               return (
                                 <label
                                   className={`pro-details-size-content--single`}
