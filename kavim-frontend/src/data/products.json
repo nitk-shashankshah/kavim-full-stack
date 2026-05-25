@@ -9,8 +9,16 @@
     "new": false,
     "rating": 4,
     "saleCount": 54,
-    "category": ["fashion", "men"],
-    "tag": ["fashion", "men", "jacket", "full sleeve"],
+    "category": [
+      "fashion",
+      "men"
+    ],
+    "tag": [
+      "fashion",
+      "men",
+      "jacket",
+      "full sleeve"
+    ],
     "variation": [
       {
         "color": "white",
@@ -94,8 +102,16 @@
     "new": false,
     "rating": 3,
     "saleCount": 12,
-    "category": ["fashion", "women"],
-    "tag": ["fashion", "women", "coat", "full sleeve"],
+    "category": [
+      "fashion",
+      "women"
+    ],
+    "tag": [
+      "fashion",
+      "women",
+      "coat",
+      "full sleeve"
+    ],
     "variation": [
       {
         "color": "blue",
@@ -170,7 +186,6 @@
     "shortDescription": "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur.",
     "fullDescription": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?"
   },
-
   {
     "id": "3",
     "sku": "asdf125",
@@ -181,8 +196,16 @@
     "new": true,
     "rating": 5,
     "saleCount": 36,
-    "category": ["fashion", "men"],
-    "tag": ["fashion", "men", "jacket", "full sleeve"],
+    "category": [
+      "fashion",
+      "men"
+    ],
+    "tag": [
+      "fashion",
+      "men",
+      "jacket",
+      "full sleeve"
+    ],
     "stock": 1,
     "image": [
       "/assets/img/product/fashion/3.jpg",
@@ -203,8 +226,16 @@
     "new": true,
     "rating": 4,
     "saleCount": 20,
-    "category": ["fashion", "women"],
-    "tag": ["fashion", "women", "coat", "full sleeve"],
+    "category": [
+      "fashion",
+      "women"
+    ],
+    "tag": [
+      "fashion",
+      "women",
+      "coat",
+      "full sleeve"
+    ],
     "variation": [
       {
         "color": "blue",
@@ -288,8 +319,16 @@
     "new": true,
     "rating": 5,
     "saleCount": 25,
-    "category": ["fashion", "women"],
-    "tag": ["fashion", "women", "coat", "full sleeve"],
+    "category": [
+      "fashion",
+      "women"
+    ],
+    "tag": [
+      "fashion",
+      "women",
+      "coat",
+      "full sleeve"
+    ],
     "variation": [
       {
         "color": "blue",
@@ -374,8 +413,16 @@
     "new": true,
     "rating": 5,
     "saleCount": 65,
-    "category": ["fashion", "men"],
-    "tag": ["fashion", "men", "jacket", "full sleeve"],
+    "category": [
+      "fashion",
+      "men"
+    ],
+    "tag": [
+      "fashion",
+      "men",
+      "jacket",
+      "full sleeve"
+    ],
     "variation": [
       {
         "color": "white",
@@ -459,8 +506,16 @@
     "new": true,
     "rating": 5,
     "saleCount": 55,
-    "category": ["fashion", "women"],
-    "tag": ["fashion", "women", "coat", "full sleeve"],
+    "category": [
+      "fashion",
+      "women"
+    ],
+    "tag": [
+      "fashion",
+      "women",
+      "coat",
+      "full sleeve"
+    ],
     "variation": [
       {
         "color": "blue",
@@ -545,8 +600,16 @@
     "new": false,
     "rating": 5,
     "saleCount": 83,
-    "category": ["fashion", "men"],
-    "tag": ["fashion", "men", "jacket", "full sleeve"],
+    "category": [
+      "fashion",
+      "men"
+    ],
+    "tag": [
+      "fashion",
+      "men",
+      "jacket",
+      "full sleeve"
+    ],
     "stock": 0,
     "image": [
       "/assets/img/product/fashion/8.jpg",
@@ -567,8 +630,16 @@
     "new": false,
     "rating": 4,
     "saleCount": 95,
-    "category": ["fashion", "women"],
-    "tag": ["fashion", "women", "top", "sleeveless"],
+    "category": [
+      "fashion",
+      "women"
+    ],
+    "tag": [
+      "fashion",
+      "women",
+      "top",
+      "sleeveless"
+    ],
     "stock": 5,
     "affiliateLink": "//www.amazon.com",
     "image": [
@@ -590,8 +661,12 @@
     "new": false,
     "rating": 4,
     "saleCount": 90,
-    "category": ["electronics"],
-    "tag": ["electronics"],
+    "category": [
+      "electronics"
+    ],
+    "tag": [
+      "electronics"
+    ],
     "stock": 15,
     "image": [
       "/assets/img/product/electronics/1.jpg",
@@ -612,8 +687,12 @@
     "new": true,
     "rating": 5,
     "saleCount": 190,
-    "category": ["electronics"],
-    "tag": ["electronics"],
+    "category": [
+      "electronics"
+    ],
+    "tag": [
+      "electronics"
+    ],
     "stock": 25,
     "image": [
       "/assets/img/product/electronics/2.jpg",
@@ -634,8 +713,12 @@
     "new": true,
     "rating": 3,
     "saleCount": 90,
-    "category": ["electronics"],
-    "tag": ["electronics"],
+    "category": [
+      "electronics"
+    ],
+    "tag": [
+      "electronics"
+    ],
     "stock": 20,
     "image": [
       "/assets/img/product/electronics/3.jpg",
@@ -656,8 +739,12 @@
     "new": false,
     "rating": 4,
     "saleCount": 100,
-    "category": ["electronics"],
-    "tag": ["electronics"],
+    "category": [
+      "electronics"
+    ],
+    "tag": [
+      "electronics"
+    ],
     "stock": 40,
     "image": [
       "/assets/img/product/electronics/4.jpg",
@@ -678,8 +765,12 @@
     "new": true,
     "rating": 5,
     "saleCount": 120,
-    "category": ["electronics"],
-    "tag": ["electronics"],
+    "category": [
+      "electronics"
+    ],
+    "tag": [
+      "electronics"
+    ],
     "stock": 45,
     "image": [
       "/assets/img/product/electronics/5.jpg",
@@ -700,8 +791,12 @@
     "new": false,
     "rating": 4,
     "saleCount": 20,
-    "category": ["electronics"],
-    "tag": ["electronics"],
+    "category": [
+      "electronics"
+    ],
+    "tag": [
+      "electronics"
+    ],
     "stock": 5,
     "image": [
       "/assets/img/product/electronics/6.jpg",
@@ -722,8 +817,12 @@
     "new": true,
     "rating": 5,
     "saleCount": 25,
-    "category": ["electronics"],
-    "tag": ["electronics"],
+    "category": [
+      "electronics"
+    ],
+    "tag": [
+      "electronics"
+    ],
     "stock": 7,
     "image": [
       "/assets/img/product/electronics/7.jpg",
@@ -744,8 +843,12 @@
     "new": true,
     "rating": 4,
     "saleCount": 15,
-    "category": ["electronics"],
-    "tag": ["electronics"],
+    "category": [
+      "electronics"
+    ],
+    "tag": [
+      "electronics"
+    ],
     "stock": 6,
     "image": [
       "/assets/img/product/electronics/8.jpg",
@@ -766,8 +869,12 @@
     "new": false,
     "rating": 4,
     "saleCount": 90,
-    "category": ["furniture"],
-    "tag": ["furniture"],
+    "category": [
+      "furniture"
+    ],
+    "tag": [
+      "furniture"
+    ],
     "stock": 15,
     "image": [
       "/assets/img/product/furnitures/1.jpg",
@@ -788,8 +895,12 @@
     "new": true,
     "rating": 5,
     "saleCount": 190,
-    "category": ["furniture"],
-    "tag": ["furniture"],
+    "category": [
+      "furniture"
+    ],
+    "tag": [
+      "furniture"
+    ],
     "stock": 25,
     "image": [
       "/assets/img/product/furnitures/2.jpg",
@@ -810,8 +921,12 @@
     "new": true,
     "rating": 3,
     "saleCount": 90,
-    "category": ["furniture"],
-    "tag": ["furniture"],
+    "category": [
+      "furniture"
+    ],
+    "tag": [
+      "furniture"
+    ],
     "stock": 20,
     "image": [
       "/assets/img/product/furnitures/3.jpg",
@@ -832,8 +947,12 @@
     "new": false,
     "rating": 4,
     "saleCount": 100,
-    "category": ["furniture"],
-    "tag": ["furniture"],
+    "category": [
+      "furniture"
+    ],
+    "tag": [
+      "furniture"
+    ],
     "stock": 40,
     "image": [
       "/assets/img/product/furnitures/4.jpg",
@@ -854,8 +973,12 @@
     "new": true,
     "rating": 5,
     "saleCount": 120,
-    "category": ["furniture"],
-    "tag": ["furniture"],
+    "category": [
+      "furniture"
+    ],
+    "tag": [
+      "furniture"
+    ],
     "stock": 45,
     "image": [
       "/assets/img/product/furnitures/5.jpg",
@@ -876,8 +999,12 @@
     "new": false,
     "rating": 4,
     "saleCount": 20,
-    "category": ["furniture"],
-    "tag": ["furniture"],
+    "category": [
+      "furniture"
+    ],
+    "tag": [
+      "furniture"
+    ],
     "stock": 5,
     "image": [
       "/assets/img/product/furnitures/6.jpg",
@@ -898,8 +1025,12 @@
     "new": true,
     "rating": 5,
     "saleCount": 25,
-    "category": ["furniture"],
-    "tag": ["furniture"],
+    "category": [
+      "furniture"
+    ],
+    "tag": [
+      "furniture"
+    ],
     "stock": 7,
     "image": [
       "/assets/img/product/furnitures/7.jpg",
@@ -920,8 +1051,12 @@
     "new": true,
     "rating": 4,
     "saleCount": 15,
-    "category": ["furniture"],
-    "tag": ["furniture"],
+    "category": [
+      "furniture"
+    ],
+    "tag": [
+      "furniture"
+    ],
     "stock": 6,
     "image": [
       "/assets/img/product/furnitures/8.jpg",
@@ -942,8 +1077,12 @@
     "new": false,
     "rating": 4,
     "saleCount": 90,
-    "category": ["plant"],
-    "tag": ["plant"],
+    "category": [
+      "plant"
+    ],
+    "tag": [
+      "plant"
+    ],
     "stock": 15,
     "image": [
       "/assets/img/product/plants/1.jpg",
@@ -964,8 +1103,12 @@
     "new": true,
     "rating": 5,
     "saleCount": 190,
-    "category": ["plant"],
-    "tag": ["plant"],
+    "category": [
+      "plant"
+    ],
+    "tag": [
+      "plant"
+    ],
     "stock": 25,
     "image": [
       "/assets/img/product/plants/2.jpg",
@@ -986,8 +1129,12 @@
     "new": true,
     "rating": 3,
     "saleCount": 90,
-    "category": ["plant"],
-    "tag": ["plant"],
+    "category": [
+      "plant"
+    ],
+    "tag": [
+      "plant"
+    ],
     "stock": 20,
     "image": [
       "/assets/img/product/plants/3.jpg",
@@ -1008,8 +1155,12 @@
     "new": false,
     "rating": 4,
     "saleCount": 100,
-    "category": ["plant"],
-    "tag": ["plant"],
+    "category": [
+      "plant"
+    ],
+    "tag": [
+      "plant"
+    ],
     "stock": 40,
     "image": [
       "/assets/img/product/plants/4.jpg",
@@ -1030,8 +1181,12 @@
     "new": true,
     "rating": 5,
     "saleCount": 120,
-    "category": ["plant"],
-    "tag": ["plant"],
+    "category": [
+      "plant"
+    ],
+    "tag": [
+      "plant"
+    ],
     "stock": 45,
     "image": [
       "/assets/img/product/plants/5.jpg",
@@ -1052,8 +1207,12 @@
     "new": false,
     "rating": 4,
     "saleCount": 20,
-    "category": ["plant"],
-    "tag": ["plant"],
+    "category": [
+      "plant"
+    ],
+    "tag": [
+      "plant"
+    ],
     "stock": 5,
     "image": [
       "/assets/img/product/plants/6.jpg",
@@ -1074,8 +1233,12 @@
     "new": true,
     "rating": 5,
     "saleCount": 25,
-    "category": ["plant"],
-    "tag": ["plant"],
+    "category": [
+      "plant"
+    ],
+    "tag": [
+      "plant"
+    ],
     "stock": 7,
     "image": [
       "/assets/img/product/plants/7.jpg",
@@ -1096,8 +1259,12 @@
     "new": true,
     "rating": 4,
     "saleCount": 15,
-    "category": ["plant"],
-    "tag": ["plant"],
+    "category": [
+      "plant"
+    ],
+    "tag": [
+      "plant"
+    ],
     "stock": 6,
     "image": [
       "/assets/img/product/plants/8.jpg",
@@ -1118,8 +1285,12 @@
     "new": false,
     "rating": 4,
     "saleCount": 90,
-    "category": ["organic food"],
-    "tag": ["organic food"],
+    "category": [
+      "organic food"
+    ],
+    "tag": [
+      "organic food"
+    ],
     "stock": 15,
     "image": [
       "/assets/img/product/fruits/1.jpg",
@@ -1140,8 +1311,12 @@
     "new": true,
     "rating": 5,
     "saleCount": 190,
-    "category": ["organic food"],
-    "tag": ["organic food"],
+    "category": [
+      "organic food"
+    ],
+    "tag": [
+      "organic food"
+    ],
     "stock": 25,
     "image": [
       "/assets/img/product/fruits/2.jpg",
@@ -1162,8 +1337,12 @@
     "new": true,
     "rating": 3,
     "saleCount": 90,
-    "category": ["organic food"],
-    "tag": ["organic food"],
+    "category": [
+      "organic food"
+    ],
+    "tag": [
+      "organic food"
+    ],
     "stock": 20,
     "image": [
       "/assets/img/product/fruits/3.jpg",
@@ -1184,8 +1363,12 @@
     "new": false,
     "rating": 4,
     "saleCount": 100,
-    "category": ["organic food"],
-    "tag": ["organic food"],
+    "category": [
+      "organic food"
+    ],
+    "tag": [
+      "organic food"
+    ],
     "stock": 40,
     "image": [
       "/assets/img/product/fruits/4.jpg",
@@ -1206,8 +1389,12 @@
     "new": true,
     "rating": 5,
     "saleCount": 120,
-    "category": ["organic food"],
-    "tag": ["organic food"],
+    "category": [
+      "organic food"
+    ],
+    "tag": [
+      "organic food"
+    ],
     "stock": 45,
     "image": [
       "/assets/img/product/fruits/5.jpg",
@@ -1228,8 +1415,12 @@
     "new": false,
     "rating": 4,
     "saleCount": 20,
-    "category": ["organic food"],
-    "tag": ["organic food"],
+    "category": [
+      "organic food"
+    ],
+    "tag": [
+      "organic food"
+    ],
     "stock": 5,
     "image": [
       "/assets/img/product/fruits/6.jpg",
@@ -1250,8 +1441,12 @@
     "new": true,
     "rating": 5,
     "saleCount": 25,
-    "category": ["organic food"],
-    "tag": ["organic food"],
+    "category": [
+      "organic food"
+    ],
+    "tag": [
+      "organic food"
+    ],
     "stock": 7,
     "image": [
       "/assets/img/product/fruits/7.jpg",
@@ -1272,8 +1467,12 @@
     "new": true,
     "rating": 4,
     "saleCount": 15,
-    "category": ["organic food"],
-    "tag": ["organic food"],
+    "category": [
+      "organic food"
+    ],
+    "tag": [
+      "organic food"
+    ],
     "stock": 6,
     "image": [
       "/assets/img/product/fruits/8.jpg",
@@ -1294,8 +1493,12 @@
     "new": true,
     "rating": 4,
     "saleCount": 15,
-    "category": ["electronics"],
-    "tag": ["electronics"],
+    "category": [
+      "electronics"
+    ],
+    "tag": [
+      "electronics"
+    ],
     "stock": 7,
     "image": [
       "/assets/img/product/electronics/9.jpg",
@@ -1316,8 +1519,12 @@
     "new": false,
     "rating": 5,
     "saleCount": 5,
-    "category": ["electronics"],
-    "tag": ["electronics"],
+    "category": [
+      "electronics"
+    ],
+    "tag": [
+      "electronics"
+    ],
     "stock": 6,
     "image": [
       "/assets/img/product/electronics/10.jpg",
@@ -1338,8 +1545,12 @@
     "new": true,
     "rating": 4,
     "saleCount": 10,
-    "category": ["flower"],
-    "tag": ["flower"],
+    "category": [
+      "flower"
+    ],
+    "tag": [
+      "flower"
+    ],
     "stock": 6,
     "image": [
       "/assets/img/product/flowers/1.jpg",
@@ -1360,8 +1571,12 @@
     "new": false,
     "rating": 5,
     "saleCount": 5,
-    "category": ["flower"],
-    "tag": ["flower"],
+    "category": [
+      "flower"
+    ],
+    "tag": [
+      "flower"
+    ],
     "stock": 7,
     "image": [
       "/assets/img/product/flowers/2.jpg",
@@ -1382,8 +1597,12 @@
     "new": true,
     "rating": 4,
     "saleCount": 7,
-    "category": ["flower"],
-    "tag": ["flower"],
+    "category": [
+      "flower"
+    ],
+    "tag": [
+      "flower"
+    ],
     "stock": 10,
     "image": [
       "/assets/img/product/flowers/3.jpg",
@@ -1404,8 +1623,12 @@
     "new": true,
     "rating": 5,
     "saleCount": 10,
-    "category": ["flower"],
-    "tag": ["flower"],
+    "category": [
+      "flower"
+    ],
+    "tag": [
+      "flower"
+    ],
     "stock": 6,
     "image": [
       "/assets/img/product/flowers/4.jpg",
@@ -1426,8 +1649,12 @@
     "new": true,
     "rating": 3,
     "saleCount": 4,
-    "category": ["flower"],
-    "tag": ["flower"],
+    "category": [
+      "flower"
+    ],
+    "tag": [
+      "flower"
+    ],
     "stock": 7,
     "image": [
       "/assets/img/product/flowers/5.jpg",
@@ -1448,8 +1675,12 @@
     "new": false,
     "rating": 5,
     "saleCount": 2,
-    "category": ["flower"],
-    "tag": ["flower"],
+    "category": [
+      "flower"
+    ],
+    "tag": [
+      "flower"
+    ],
     "stock": 10,
     "image": [
       "/assets/img/product/flowers/6.jpg",
@@ -1470,8 +1701,12 @@
     "new": true,
     "rating": 5,
     "saleCount": 5,
-    "category": ["flower"],
-    "tag": ["flower"],
+    "category": [
+      "flower"
+    ],
+    "tag": [
+      "flower"
+    ],
     "stock": 6,
     "image": [
       "/assets/img/product/flowers/7.jpg",
@@ -1492,8 +1727,12 @@
     "new": true,
     "rating": 5,
     "saleCount": 9,
-    "category": ["flower"],
-    "tag": ["flower"],
+    "category": [
+      "flower"
+    ],
+    "tag": [
+      "flower"
+    ],
     "stock": 10,
     "image": [
       "/assets/img/product/flowers/8.jpg",
@@ -1514,8 +1753,12 @@
     "new": true,
     "rating": 5,
     "saleCount": 10,
-    "category": ["book"],
-    "tag": ["book"],
+    "category": [
+      "book"
+    ],
+    "tag": [
+      "book"
+    ],
     "stock": 20,
     "image": [
       "/assets/img/product/books/1.jpg",
@@ -1536,8 +1779,12 @@
     "new": true,
     "rating": 5,
     "saleCount": 10,
-    "category": ["book"],
-    "tag": ["book"],
+    "category": [
+      "book"
+    ],
+    "tag": [
+      "book"
+    ],
     "stock": 20,
     "image": [
       "/assets/img/product/books/2.jpg",
@@ -1558,8 +1805,12 @@
     "new": true,
     "rating": 3,
     "saleCount": 11,
-    "category": ["book"],
-    "tag": ["book"],
+    "category": [
+      "book"
+    ],
+    "tag": [
+      "book"
+    ],
     "stock": 20,
     "image": [
       "/assets/img/product/books/3.jpg",
@@ -1580,8 +1831,12 @@
     "new": true,
     "rating": 4,
     "saleCount": 19,
-    "category": ["book"],
-    "tag": ["book"],
+    "category": [
+      "book"
+    ],
+    "tag": [
+      "book"
+    ],
     "stock": 40,
     "image": [
       "/assets/img/product/books/4.jpg",
@@ -1602,8 +1857,12 @@
     "new": false,
     "rating": 4,
     "saleCount": 12,
-    "category": ["book"],
-    "tag": ["book"],
+    "category": [
+      "book"
+    ],
+    "tag": [
+      "book"
+    ],
     "stock": 8,
     "image": [
       "/assets/img/product/books/5.jpg",
@@ -1624,8 +1883,12 @@
     "new": true,
     "rating": 4,
     "saleCount": 19,
-    "category": ["book"],
-    "tag": ["book"],
+    "category": [
+      "book"
+    ],
+    "tag": [
+      "book"
+    ],
     "stock": 20,
     "image": [
       "/assets/img/product/books/6.jpg",
@@ -1646,8 +1909,12 @@
     "new": false,
     "rating": 2,
     "saleCount": 9,
-    "category": ["book"],
-    "tag": ["book"],
+    "category": [
+      "book"
+    ],
+    "tag": [
+      "book"
+    ],
     "stock": 11,
     "image": [
       "/assets/img/product/books/7.jpg",
@@ -1668,8 +1935,12 @@
     "new": true,
     "rating": 3,
     "saleCount": 19,
-    "category": ["book"],
-    "tag": ["book"],
+    "category": [
+      "book"
+    ],
+    "tag": [
+      "book"
+    ],
     "stock": 30,
     "image": [
       "/assets/img/product/books/8.jpg",
@@ -1690,8 +1961,12 @@
     "new": true,
     "rating": 3,
     "saleCount": 20,
-    "category": ["cosmetics"],
-    "tag": ["cosmetics"],
+    "category": [
+      "cosmetics"
+    ],
+    "tag": [
+      "cosmetics"
+    ],
     "stock": 20,
     "image": [
       "/assets/img/product/cosmetics/1.jpg",
@@ -1712,8 +1987,12 @@
     "new": false,
     "rating": 5,
     "saleCount": 9,
-    "category": ["cosmetics"],
-    "tag": ["cosmetics"],
+    "category": [
+      "cosmetics"
+    ],
+    "tag": [
+      "cosmetics"
+    ],
     "stock": 20,
     "image": [
       "/assets/img/product/cosmetics/2.jpg",
@@ -1734,8 +2013,12 @@
     "new": true,
     "rating": 5,
     "saleCount": 29,
-    "category": ["cosmetics"],
-    "tag": ["cosmetics"],
+    "category": [
+      "cosmetics"
+    ],
+    "tag": [
+      "cosmetics"
+    ],
     "stock": 20,
     "image": [
       "/assets/img/product/cosmetics/3.jpg",
@@ -1756,8 +2039,12 @@
     "new": false,
     "rating": 4,
     "saleCount": 20,
-    "category": ["cosmetics"],
-    "tag": ["cosmetics"],
+    "category": [
+      "cosmetics"
+    ],
+    "tag": [
+      "cosmetics"
+    ],
     "stock": 10,
     "image": [
       "/assets/img/product/cosmetics/4.jpg",
@@ -1778,8 +2065,12 @@
     "new": true,
     "rating": 5,
     "saleCount": 20,
-    "category": ["cosmetics"],
-    "tag": ["cosmetics"],
+    "category": [
+      "cosmetics"
+    ],
+    "tag": [
+      "cosmetics"
+    ],
     "stock": 20,
     "image": [
       "/assets/img/product/cosmetics/5.jpg",
@@ -1800,8 +2091,12 @@
     "new": false,
     "rating": 2,
     "saleCount": 29,
-    "category": ["cosmetics"],
-    "tag": ["cosmetics"],
+    "category": [
+      "cosmetics"
+    ],
+    "tag": [
+      "cosmetics"
+    ],
     "stock": 20,
     "image": [
       "/assets/img/product/cosmetics/6.jpg",
@@ -1822,8 +2117,12 @@
     "new": true,
     "rating": 4,
     "saleCount": 10,
-    "category": ["cosmetics"],
-    "tag": ["cosmetics"],
+    "category": [
+      "cosmetics"
+    ],
+    "tag": [
+      "cosmetics"
+    ],
     "stock": 20,
     "image": [
       "/assets/img/product/cosmetics/7.jpg",
@@ -1844,8 +2143,12 @@
     "new": false,
     "rating": 4,
     "saleCount": 29,
-    "category": ["cosmetics"],
-    "tag": ["cosmetics"],
+    "category": [
+      "cosmetics"
+    ],
+    "tag": [
+      "cosmetics"
+    ],
     "stock": 20,
     "image": [
       "/assets/img/product/cosmetics/8.jpg",
@@ -1866,8 +2169,12 @@
     "new": true,
     "rating": 4,
     "saleCount": 29,
-    "category": ["accessories"],
-    "tag": ["accessories"],
+    "category": [
+      "accessories"
+    ],
+    "tag": [
+      "accessories"
+    ],
     "stock": 20,
     "image": [
       "/assets/img/product/accessories/1.jpg",
@@ -1888,8 +2195,12 @@
     "new": false,
     "rating": 5,
     "saleCount": 19,
-    "category": ["accessories"],
-    "tag": ["accessories"],
+    "category": [
+      "accessories"
+    ],
+    "tag": [
+      "accessories"
+    ],
     "stock": 30,
     "image": [
       "/assets/img/product/accessories/2.jpg",
@@ -1910,8 +2221,12 @@
     "new": true,
     "rating": 5,
     "saleCount": 30,
-    "category": ["accessories"],
-    "tag": ["accessories"],
+    "category": [
+      "accessories"
+    ],
+    "tag": [
+      "accessories"
+    ],
     "stock": 10,
     "image": [
       "/assets/img/product/accessories/3.jpg",
@@ -1932,8 +2247,12 @@
     "new": false,
     "rating": 5,
     "saleCount": 20,
-    "category": ["accessories"],
-    "tag": ["accessories"],
+    "category": [
+      "accessories"
+    ],
+    "tag": [
+      "accessories"
+    ],
     "stock": 30,
     "image": [
       "/assets/img/product/accessories/4.jpg",
@@ -1954,8 +2273,12 @@
     "new": true,
     "rating": 5,
     "saleCount": 20,
-    "category": ["accessories"],
-    "tag": ["accessories"],
+    "category": [
+      "accessories"
+    ],
+    "tag": [
+      "accessories"
+    ],
     "stock": 10,
     "image": [
       "/assets/img/product/accessories/5.jpg",
@@ -1976,8 +2299,12 @@
     "new": true,
     "rating": 5,
     "saleCount": 19,
-    "category": ["accessories"],
-    "tag": ["accessories"],
+    "category": [
+      "accessories"
+    ],
+    "tag": [
+      "accessories"
+    ],
     "stock": 30,
     "image": [
       "/assets/img/product/accessories/6.jpg",
@@ -1998,8 +2325,12 @@
     "new": true,
     "rating": 5,
     "saleCount": 15,
-    "category": ["accessories"],
-    "tag": ["accessories"],
+    "category": [
+      "accessories"
+    ],
+    "tag": [
+      "accessories"
+    ],
     "stock": 10,
     "image": [
       "/assets/img/product/accessories/7.jpg",
@@ -2020,8 +2351,12 @@
     "new": true,
     "rating": 5,
     "saleCount": 2,
-    "category": ["accessories"],
-    "tag": ["accessories"],
+    "category": [
+      "accessories"
+    ],
+    "tag": [
+      "accessories"
+    ],
     "stock": 10,
     "image": [
       "/assets/img/product/accessories/8.jpg",
@@ -2042,8 +2377,12 @@
     "new": true,
     "rating": 5,
     "saleCount": 34,
-    "category": ["accessories"],
-    "tag": ["accessories"],
+    "category": [
+      "accessories"
+    ],
+    "tag": [
+      "accessories"
+    ],
     "stock": 10,
     "image": [
       "/assets/img/product/accessories/9.jpg",
@@ -2064,8 +2403,12 @@
     "new": true,
     "rating": 5,
     "saleCount": 19,
-    "category": ["accessories"],
-    "tag": ["accessories"],
+    "category": [
+      "accessories"
+    ],
+    "tag": [
+      "accessories"
+    ],
     "stock": 30,
     "image": [
       "/assets/img/product/accessories/10.jpg",
@@ -2086,8 +2429,12 @@
     "new": true,
     "rating": 4,
     "saleCount": 20,
-    "category": ["accessories"],
-    "tag": ["accessories"],
+    "category": [
+      "accessories"
+    ],
+    "tag": [
+      "accessories"
+    ],
     "stock": 23,
     "image": [
       "/assets/img/product/accessories/11.jpg",
@@ -2108,8 +2455,12 @@
     "new": true,
     "rating": 5,
     "saleCount": 19,
-    "category": ["accessories"],
-    "tag": ["accessories"],
+    "category": [
+      "accessories"
+    ],
+    "tag": [
+      "accessories"
+    ],
     "stock": 10,
     "image": [
       "/assets/img/product/accessories/12.jpg",
@@ -2130,8 +2481,12 @@
     "new": true,
     "rating": 4,
     "saleCount": 19,
-    "category": ["handmade"],
-    "tag": ["handmade"],
+    "category": [
+      "handmade"
+    ],
+    "tag": [
+      "handmade"
+    ],
     "stock": 10,
     "image": [
       "/assets/img/product/handmade/1.jpg",
@@ -2152,8 +2507,12 @@
     "new": false,
     "rating": 4,
     "saleCount": 15,
-    "category": ["handmade"],
-    "tag": ["handmade"],
+    "category": [
+      "handmade"
+    ],
+    "tag": [
+      "handmade"
+    ],
     "stock": 7,
     "image": [
       "/assets/img/product/handmade/2.jpg",
@@ -2174,8 +2533,12 @@
     "new": true,
     "rating": 5,
     "saleCount": 12,
-    "category": ["handmade"],
-    "tag": ["handmade"],
+    "category": [
+      "handmade"
+    ],
+    "tag": [
+      "handmade"
+    ],
     "stock": 6,
     "image": [
       "/assets/img/product/handmade/3.jpg",
@@ -2196,8 +2559,12 @@
     "new": true,
     "rating": 3,
     "saleCount": 14,
-    "category": ["handmade"],
-    "tag": ["handmade"],
+    "category": [
+      "handmade"
+    ],
+    "tag": [
+      "handmade"
+    ],
     "stock": 12,
     "image": [
       "/assets/img/product/handmade/4.jpg",
@@ -2218,8 +2585,12 @@
     "new": false,
     "rating": 3,
     "saleCount": 13,
-    "category": ["handmade"],
-    "tag": ["handmade"],
+    "category": [
+      "handmade"
+    ],
+    "tag": [
+      "handmade"
+    ],
     "stock": 8,
     "image": [
       "/assets/img/product/handmade/5.jpg",
@@ -2240,8 +2611,12 @@
     "new": true,
     "rating": 5,
     "saleCount": 17,
-    "category": ["handmade"],
-    "tag": ["handmade"],
+    "category": [
+      "handmade"
+    ],
+    "tag": [
+      "handmade"
+    ],
     "stock": 5,
     "image": [
       "/assets/img/product/handmade/6.jpg",
@@ -2262,8 +2637,12 @@
     "new": true,
     "rating": 4,
     "saleCount": 18,
-    "category": ["handmade"],
-    "tag": ["handmade"],
+    "category": [
+      "handmade"
+    ],
+    "tag": [
+      "handmade"
+    ],
     "stock": 5,
     "image": [
       "/assets/img/product/handmade/7.jpg",
@@ -2284,8 +2663,12 @@
     "new": true,
     "rating": 5,
     "saleCount": 20,
-    "category": ["handmade"],
-    "tag": ["handmade"],
+    "category": [
+      "handmade"
+    ],
+    "tag": [
+      "handmade"
+    ],
     "stock": 10,
     "image": [
       "/assets/img/product/handmade/8.jpg",
@@ -2307,8 +2690,14 @@
     "new": false,
     "rating": 4,
     "saleCount": 54,
-    "category": ["fashion", "kids"],
-    "tag": ["fashion", "kids"],
+    "category": [
+      "fashion",
+      "kids"
+    ],
+    "tag": [
+      "fashion",
+      "kids"
+    ],
     "variation": [
       {
         "color": "white",
@@ -2392,8 +2781,14 @@
     "new": false,
     "rating": 3,
     "saleCount": 12,
-    "category": ["fashion", "kids"],
-    "tag": ["fashion", "kids"],
+    "category": [
+      "fashion",
+      "kids"
+    ],
+    "tag": [
+      "fashion",
+      "kids"
+    ],
     "variation": [
       {
         "color": "blue",
@@ -2468,7 +2863,6 @@
     "shortDescription": "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur.",
     "fullDescription": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?"
   },
-
   {
     "id": "90",
     "sku": "asdf212",
@@ -2479,8 +2873,14 @@
     "new": true,
     "rating": 5,
     "saleCount": 36,
-    "category": ["fashion", "kids"],
-    "tag": ["fashion", "kids"],
+    "category": [
+      "fashion",
+      "kids"
+    ],
+    "tag": [
+      "fashion",
+      "kids"
+    ],
     "variation": [
       {
         "color": "white",
@@ -2564,8 +2964,14 @@
     "new": true,
     "rating": 4,
     "saleCount": 20,
-    "category": ["fashion", "kids"],
-    "tag": ["fashion", "kids"],
+    "category": [
+      "fashion",
+      "kids"
+    ],
+    "tag": [
+      "fashion",
+      "kids"
+    ],
     "variation": [
       {
         "color": "blue",
@@ -2649,8 +3055,14 @@
     "new": true,
     "rating": 5,
     "saleCount": 25,
-    "category": ["fashion", "kids"],
-    "tag": ["fashion", "kids"],
+    "category": [
+      "fashion",
+      "kids"
+    ],
+    "tag": [
+      "fashion",
+      "kids"
+    ],
     "variation": [
       {
         "color": "blue",
@@ -2735,8 +3147,14 @@
     "new": true,
     "rating": 5,
     "saleCount": 65,
-    "category": ["fashion", "kids"],
-    "tag": ["fashion", "kids"],
+    "category": [
+      "fashion",
+      "kids"
+    ],
+    "tag": [
+      "fashion",
+      "kids"
+    ],
     "variation": [
       {
         "color": "white",
@@ -2820,8 +3238,14 @@
     "new": true,
     "rating": 5,
     "saleCount": 55,
-    "category": ["fashion", "kids"],
-    "tag": ["fashion", "kids"],
+    "category": [
+      "fashion",
+      "kids"
+    ],
+    "tag": [
+      "fashion",
+      "kids"
+    ],
     "variation": [
       {
         "color": "blue",
@@ -2906,8 +3330,14 @@
     "new": false,
     "rating": 5,
     "saleCount": 83,
-    "category": ["fashion", "kids"],
-    "tag": ["fashion", "kids"],
+    "category": [
+      "fashion",
+      "kids"
+    ],
+    "tag": [
+      "fashion",
+      "kids"
+    ],
     "stock": 0,
     "image": [
       "/assets/img/product/fashion/30.jpg",
@@ -2928,8 +3358,12 @@
     "new": true,
     "rating": 5,
     "saleCount": 20,
-    "category": ["auto parts"],
-    "tag": ["auto parts"],
+    "category": [
+      "auto parts"
+    ],
+    "tag": [
+      "auto parts"
+    ],
     "stock": 15,
     "image": [
       "/assets/img/product/auto-parts/1.jpg",
@@ -2950,8 +3384,12 @@
     "new": false,
     "rating": 4,
     "saleCount": 10,
-    "category": ["auto parts"],
-    "tag": ["auto parts"],
+    "category": [
+      "auto parts"
+    ],
+    "tag": [
+      "auto parts"
+    ],
     "stock": 10,
     "image": [
       "/assets/img/product/auto-parts/2.jpg",
@@ -2972,8 +3410,12 @@
     "new": true,
     "rating": 3,
     "saleCount": 30,
-    "category": ["auto parts"],
-    "tag": ["auto parts"],
+    "category": [
+      "auto parts"
+    ],
+    "tag": [
+      "auto parts"
+    ],
     "stock": 13,
     "image": [
       "/assets/img/product/auto-parts/3.jpg",
@@ -2994,8 +3436,12 @@
     "new": false,
     "rating": 2,
     "saleCount": 10,
-    "category": ["auto parts"],
-    "tag": ["auto parts"],
+    "category": [
+      "auto parts"
+    ],
+    "tag": [
+      "auto parts"
+    ],
     "stock": 5,
     "image": [
       "/assets/img/product/auto-parts/4.jpg",
@@ -3016,8 +3462,12 @@
     "new": false,
     "rating": 5,
     "saleCount": 10,
-    "category": ["cakes"],
-    "tag": ["cakes"],
+    "category": [
+      "cakes"
+    ],
+    "tag": [
+      "cakes"
+    ],
     "stock": 20,
     "image": [
       "/assets/img/product/cake-shop/1.jpg",
@@ -3038,8 +3488,12 @@
     "new": true,
     "rating": 4,
     "saleCount": 15,
-    "category": ["cakes"],
-    "tag": ["cakes"],
+    "category": [
+      "cakes"
+    ],
+    "tag": [
+      "cakes"
+    ],
     "stock": 25,
     "image": [
       "/assets/img/product/cake-shop/2.jpg",
@@ -3060,8 +3514,12 @@
     "new": false,
     "rating": 5,
     "saleCount": 30,
-    "category": ["cakes"],
-    "tag": ["cakes"],
+    "category": [
+      "cakes"
+    ],
+    "tag": [
+      "cakes"
+    ],
     "stock": 10,
     "image": [
       "/assets/img/product/cake-shop/3.jpg",
@@ -3082,8 +3540,12 @@
     "new": true,
     "rating": 4,
     "saleCount": 14,
-    "category": ["cakes"],
-    "tag": ["cakes"],
+    "category": [
+      "cakes"
+    ],
+    "tag": [
+      "cakes"
+    ],
     "stock": 10,
     "image": [
       "/assets/img/product/cake-shop/4.jpg",
@@ -3104,8 +3566,12 @@
     "new": false,
     "rating": 5,
     "saleCount": 30,
-    "category": ["cakes"],
-    "tag": ["cakes"],
+    "category": [
+      "cakes"
+    ],
+    "tag": [
+      "cakes"
+    ],
     "stock": 40,
     "image": [
       "/assets/img/product/cake-shop/5.jpg",
@@ -3126,8 +3592,12 @@
     "new": true,
     "rating": 3,
     "saleCount": 30,
-    "category": ["cakes"],
-    "tag": ["cakes"],
+    "category": [
+      "cakes"
+    ],
+    "tag": [
+      "cakes"
+    ],
     "stock": 25,
     "image": [
       "/assets/img/product/cake-shop/6.jpg",
@@ -3148,8 +3618,12 @@
     "new": true,
     "rating": 3,
     "saleCount": 20,
-    "category": ["cakes"],
-    "tag": ["cakes"],
+    "category": [
+      "cakes"
+    ],
+    "tag": [
+      "cakes"
+    ],
     "stock": 40,
     "image": [
       "/assets/img/product/cake-shop/7.jpg",
@@ -3170,8 +3644,12 @@
     "new": true,
     "rating": 3,
     "saleCount": 20,
-    "category": ["cakes"],
-    "tag": ["cakes"],
+    "category": [
+      "cakes"
+    ],
+    "tag": [
+      "cakes"
+    ],
     "stock": 60,
     "image": [
       "/assets/img/product/cake-shop/8.jpg",
@@ -3192,8 +3670,12 @@
     "new": false,
     "rating": 5,
     "saleCount": 10,
-    "category": ["cakes"],
-    "tag": ["cakes"],
+    "category": [
+      "cakes"
+    ],
+    "tag": [
+      "cakes"
+    ],
     "stock": 20,
     "image": [
       "/assets/img/product/cake-shop/1.jpg",
@@ -3214,8 +3696,12 @@
     "new": true,
     "rating": 4,
     "saleCount": 15,
-    "category": ["cakes"],
-    "tag": ["cakes"],
+    "category": [
+      "cakes"
+    ],
+    "tag": [
+      "cakes"
+    ],
     "stock": 25,
     "image": [
       "/assets/img/product/cake-shop/2.jpg",
@@ -3236,8 +3722,12 @@
     "new": false,
     "rating": 5,
     "saleCount": 30,
-    "category": ["cakes"],
-    "tag": ["cakes"],
+    "category": [
+      "cakes"
+    ],
+    "tag": [
+      "cakes"
+    ],
     "stock": 10,
     "image": [
       "/assets/img/product/cake-shop/3.jpg",
@@ -3258,8 +3748,12 @@
     "new": true,
     "rating": 4,
     "saleCount": 14,
-    "category": ["cakes"],
-    "tag": ["cakes"],
+    "category": [
+      "cakes"
+    ],
+    "tag": [
+      "cakes"
+    ],
     "stock": 10,
     "image": [
       "/assets/img/product/cake-shop/4.jpg",
@@ -3280,8 +3774,12 @@
     "new": false,
     "rating": 5,
     "saleCount": 30,
-    "category": ["cakes"],
-    "tag": ["cakes"],
+    "category": [
+      "cakes"
+    ],
+    "tag": [
+      "cakes"
+    ],
     "stock": 40,
     "image": [
       "/assets/img/product/cake-shop/5.jpg",
@@ -3302,8 +3800,12 @@
     "new": true,
     "rating": 3,
     "saleCount": 30,
-    "category": ["cakes"],
-    "tag": ["cakes"],
+    "category": [
+      "cakes"
+    ],
+    "tag": [
+      "cakes"
+    ],
     "stock": 25,
     "image": [
       "/assets/img/product/cake-shop/6.jpg",
@@ -3324,8 +3826,12 @@
     "new": true,
     "rating": 3,
     "saleCount": 20,
-    "category": ["cakes"],
-    "tag": ["cakes"],
+    "category": [
+      "cakes"
+    ],
+    "tag": [
+      "cakes"
+    ],
     "stock": 40,
     "image": [
       "/assets/img/product/cake-shop/7.jpg",
@@ -3346,8 +3852,12 @@
     "new": true,
     "rating": 3,
     "saleCount": 20,
-    "category": ["cakes"],
-    "tag": ["cakes"],
+    "category": [
+      "cakes"
+    ],
+    "tag": [
+      "cakes"
+    ],
     "stock": 60,
     "image": [
       "/assets/img/product/cake-shop/8.jpg",
@@ -3368,8 +3878,12 @@
     "new": false,
     "rating": 5,
     "saleCount": 10,
-    "category": ["pet food"],
-    "tag": ["pet food"],
+    "category": [
+      "pet food"
+    ],
+    "tag": [
+      "pet food"
+    ],
     "stock": 20,
     "image": [
       "/assets/img/product/pet-food/1.jpg",
@@ -3390,8 +3904,12 @@
     "new": true,
     "rating": 4,
     "saleCount": 15,
-    "category": ["pet food"],
-    "tag": ["pet food"],
+    "category": [
+      "pet food"
+    ],
+    "tag": [
+      "pet food"
+    ],
     "stock": 25,
     "image": [
       "/assets/img/product/pet-food/2.jpg",
@@ -3412,8 +3930,12 @@
     "new": false,
     "rating": 5,
     "saleCount": 30,
-    "category": ["pet food"],
-    "tag": ["pet food"],
+    "category": [
+      "pet food"
+    ],
+    "tag": [
+      "pet food"
+    ],
     "stock": 10,
     "image": [
       "/assets/img/product/pet-food/3.jpg",
@@ -3434,8 +3956,12 @@
     "new": true,
     "rating": 4,
     "saleCount": 14,
-    "category": ["pet food"],
-    "tag": ["pet food"],
+    "category": [
+      "pet food"
+    ],
+    "tag": [
+      "pet food"
+    ],
     "stock": 10,
     "image": [
       "/assets/img/product/pet-food/4.jpg",
@@ -3456,8 +3982,12 @@
     "new": false,
     "rating": 5,
     "saleCount": 30,
-    "category": ["pet food"],
-    "tag": ["pet food"],
+    "category": [
+      "pet food"
+    ],
+    "tag": [
+      "pet food"
+    ],
     "stock": 40,
     "image": [
       "/assets/img/product/pet-food/5.jpg",
@@ -3478,8 +4008,12 @@
     "new": true,
     "rating": 3,
     "saleCount": 30,
-    "category": ["pet food"],
-    "tag": ["pet food"],
+    "category": [
+      "pet food"
+    ],
+    "tag": [
+      "pet food"
+    ],
     "stock": 25,
     "image": [
       "/assets/img/product/pet-food/6.jpg",
@@ -3500,8 +4034,12 @@
     "new": true,
     "rating": 3,
     "saleCount": 20,
-    "category": ["pet food"],
-    "tag": ["pet food"],
+    "category": [
+      "pet food"
+    ],
+    "tag": [
+      "pet food"
+    ],
     "stock": 40,
     "image": [
       "/assets/img/product/pet-food/7.jpg",
@@ -3522,8 +4060,12 @@
     "new": true,
     "rating": 3,
     "saleCount": 20,
-    "category": ["pet food"],
-    "tag": ["pet food"],
+    "category": [
+      "pet food"
+    ],
+    "tag": [
+      "pet food"
+    ],
     "stock": 60,
     "image": [
       "/assets/img/product/pet-food/8.jpg",
@@ -3544,8 +4086,12 @@
     "new": false,
     "rating": 5,
     "saleCount": 10,
-    "category": ["medical"],
-    "tag": ["medical"],
+    "category": [
+      "medical"
+    ],
+    "tag": [
+      "medical"
+    ],
     "stock": 20,
     "image": [
       "/assets/img/product/medical/1.jpg",
@@ -3566,8 +4112,12 @@
     "new": true,
     "rating": 4,
     "saleCount": 15,
-    "category": ["medical"],
-    "tag": ["medical"],
+    "category": [
+      "medical"
+    ],
+    "tag": [
+      "medical"
+    ],
     "stock": 25,
     "image": [
       "/assets/img/product/medical/2.jpg",
@@ -3588,8 +4138,12 @@
     "new": false,
     "rating": 5,
     "saleCount": 30,
-    "category": ["medical"],
-    "tag": ["medical"],
+    "category": [
+      "medical"
+    ],
+    "tag": [
+      "medical"
+    ],
     "stock": 10,
     "image": [
       "/assets/img/product/medical/3.jpg",
@@ -3610,8 +4164,12 @@
     "new": true,
     "rating": 4,
     "saleCount": 14,
-    "category": ["medical"],
-    "tag": ["medical"],
+    "category": [
+      "medical"
+    ],
+    "tag": [
+      "medical"
+    ],
     "stock": 10,
     "image": [
       "/assets/img/product/medical/4.jpg",
@@ -3632,8 +4190,12 @@
     "new": false,
     "rating": 5,
     "saleCount": 30,
-    "category": ["medical"],
-    "tag": ["medical"],
+    "category": [
+      "medical"
+    ],
+    "tag": [
+      "medical"
+    ],
     "stock": 40,
     "image": [
       "/assets/img/product/medical/5.jpg",
@@ -3654,8 +4216,12 @@
     "new": true,
     "rating": 3,
     "saleCount": 30,
-    "category": ["medical"],
-    "tag": ["medical"],
+    "category": [
+      "medical"
+    ],
+    "tag": [
+      "medical"
+    ],
     "stock": 25,
     "image": [
       "/assets/img/product/medical/6.jpg",
@@ -3676,8 +4242,12 @@
     "new": true,
     "rating": 3,
     "saleCount": 20,
-    "category": ["medical"],
-    "tag": ["medical"],
+    "category": [
+      "medical"
+    ],
+    "tag": [
+      "medical"
+    ],
     "stock": 40,
     "image": [
       "/assets/img/product/medical/7.jpg",
@@ -3698,8 +4268,12 @@
     "new": true,
     "rating": 3,
     "saleCount": 20,
-    "category": ["medical"],
-    "tag": ["medical"],
+    "category": [
+      "medical"
+    ],
+    "tag": [
+      "medical"
+    ],
     "stock": 60,
     "image": [
       "/assets/img/product/medical/8.jpg",
@@ -3720,8 +4294,12 @@
     "new": false,
     "rating": 5,
     "saleCount": 10,
-    "category": ["black friday"],
-    "tag": ["black friday"],
+    "category": [
+      "black friday"
+    ],
+    "tag": [
+      "black friday"
+    ],
     "stock": 20,
     "image": [
       "/assets/img/product/black-friday/1.jpg",
@@ -3742,8 +4320,12 @@
     "new": true,
     "rating": 4,
     "saleCount": 15,
-    "category": ["black friday"],
-    "tag": ["black friday"],
+    "category": [
+      "black friday"
+    ],
+    "tag": [
+      "black friday"
+    ],
     "stock": 25,
     "image": [
       "/assets/img/product/black-friday/2.jpg",
@@ -3764,8 +4346,12 @@
     "new": false,
     "rating": 5,
     "saleCount": 30,
-    "category": ["black friday"],
-    "tag": ["black friday"],
+    "category": [
+      "black friday"
+    ],
+    "tag": [
+      "black friday"
+    ],
     "stock": 10,
     "image": [
       "/assets/img/product/black-friday/3.jpg",
@@ -3786,8 +4372,12 @@
     "new": true,
     "rating": 4,
     "saleCount": 14,
-    "category": ["black friday"],
-    "tag": ["black friday"],
+    "category": [
+      "black friday"
+    ],
+    "tag": [
+      "black friday"
+    ],
     "stock": 10,
     "image": [
       "/assets/img/product/black-friday/4.jpg",
@@ -3808,8 +4398,12 @@
     "new": false,
     "rating": 5,
     "saleCount": 30,
-    "category": ["black friday"],
-    "tag": ["black friday"],
+    "category": [
+      "black friday"
+    ],
+    "tag": [
+      "black friday"
+    ],
     "stock": 40,
     "image": [
       "/assets/img/product/black-friday/5.jpg",
@@ -3830,8 +4424,12 @@
     "new": true,
     "rating": 3,
     "saleCount": 30,
-    "category": ["black friday"],
-    "tag": ["black friday"],
+    "category": [
+      "black friday"
+    ],
+    "tag": [
+      "black friday"
+    ],
     "stock": 25,
     "image": [
       "/assets/img/product/black-friday/6.jpg",
@@ -3852,8 +4450,12 @@
     "new": true,
     "rating": 3,
     "saleCount": 20,
-    "category": ["black friday"],
-    "tag": ["black friday"],
+    "category": [
+      "black friday"
+    ],
+    "tag": [
+      "black friday"
+    ],
     "stock": 40,
     "image": [
       "/assets/img/product/black-friday/7.jpg",
@@ -3874,8 +4476,12 @@
     "new": true,
     "rating": 3,
     "saleCount": 20,
-    "category": ["black friday"],
-    "tag": ["black friday"],
+    "category": [
+      "black friday"
+    ],
+    "tag": [
+      "black friday"
+    ],
     "stock": 60,
     "image": [
       "/assets/img/product/black-friday/8.jpg",
@@ -3896,8 +4502,12 @@
     "new": true,
     "rating": 4,
     "saleCount": 14,
-    "category": ["christmas"],
-    "tag": ["christmas"],
+    "category": [
+      "christmas"
+    ],
+    "tag": [
+      "christmas"
+    ],
     "stock": 10,
     "image": [
       "/assets/img/product/christmas/1.jpg",
@@ -3918,8 +4528,12 @@
     "new": false,
     "rating": 5,
     "saleCount": 30,
-    "category": ["christmas"],
-    "tag": ["christmas"],
+    "category": [
+      "christmas"
+    ],
+    "tag": [
+      "christmas"
+    ],
     "stock": 40,
     "image": [
       "/assets/img/product/christmas/2.jpg",
@@ -3940,8 +4554,12 @@
     "new": true,
     "rating": 3,
     "saleCount": 30,
-    "category": ["christmas"],
-    "tag": ["christmas"],
+    "category": [
+      "christmas"
+    ],
+    "tag": [
+      "christmas"
+    ],
     "stock": 25,
     "image": [
       "/assets/img/product/christmas/3.jpg",
@@ -3962,8 +4580,12 @@
     "new": true,
     "rating": 3,
     "saleCount": 20,
-    "category": ["christmas"],
-    "tag": ["christmas"],
+    "category": [
+      "christmas"
+    ],
+    "tag": [
+      "christmas"
+    ],
     "stock": 40,
     "image": [
       "/assets/img/product/christmas/4.jpg",
@@ -3984,8 +4606,12 @@
     "new": true,
     "rating": 3,
     "saleCount": 20,
-    "category": ["christmas"],
-    "tag": ["christmas"],
+    "category": [
+      "christmas"
+    ],
+    "tag": [
+      "christmas"
+    ],
     "stock": 60,
     "image": [
       "/assets/img/product/christmas/5.jpg",
@@ -3996,5 +4622,36 @@
     ],
     "shortDescription": "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur.",
     "fullDescription": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt."
+  },
+  {
+    "id": "145",
+    "sku": "heritage-elephant-serveware",
+    "name": "Heritage Elephant Serveware",
+    "price": 58.99,
+    "discount": 10,
+    "new": true,
+    "rating": 4,
+    "saleCount": 0,
+    "stock": 24,
+    "category": [
+      "home",
+      "decor",
+      "handmade"
+    ],
+    "tag": [
+      "heritage",
+      "elephant",
+      "serveware",
+      "decor",
+      "gift"
+    ],
+    "image": [
+      "/assets/img/product/handmade/1.jpg",
+      "/assets/img/product/handmade/2.jpg",
+      "/assets/img/product/handmade/3.jpg",
+      "/assets/img/product/handmade/4.jpg"
+    ],
+    "shortDescription": "A beautifully crafted Heritage Elephant Serveware set with rich heritage motifs and premium finish.",
+    "fullDescription": "Bring heritage charm to your table with this elephant-inspired serveware collection. Each piece features hand-finished detailing, durable construction, and an elegant design that elevates entertaining, dining, and gifting."
   }
 ]

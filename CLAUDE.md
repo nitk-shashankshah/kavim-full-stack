@@ -58,7 +58,6 @@ JWT_EXPIRES_IN=7d
 
 **Health check:** `GET /health` → `{ status: 'ok' }` (used by K8s readiness probe)
 
----
 
 ## Frontend — kavim-frontend
 
@@ -91,14 +90,9 @@ REACT_APP_API_URL=http://localhost:5001/api    # Local dev
 **API services** (`src/services/`): `api.js` (axios instance with JWT interceptor), `authService.js`, `productService.js`, `cartService.js`, `wishlistService.js`, `orderService.js`, `categoryService.js`
 
 **Key pages:**
-- `src/pages/other/LoginRegister.js` — login / register forms
-- `src/pages/other/Checkout.js` — billing form + order placement
-- `src/pages/other/MyAccount.js` — profile + password update
-- `src/pages/other/Cart.js` — cart management
 
 **Product fallback:** On startup, `src/index.js` calls `fetchProducts()` from the API; if the API is unreachable it falls back to the bundled `src/data/products.json`.
 
----
 
 ## Kubernetes — k8s/
 
@@ -116,12 +110,11 @@ REACT_APP_API_URL=http://localhost:5001/api    # Local dev
 | `backend-configmap.yaml` | ConfigMap | Non-sensitive env vars |
 | `backend-deployment.yaml` | Deployment | `kavim.azurecr.io/flone-backend:latest` |
 | `backend-service.yaml` | Service (ClusterIP) | Internal backend access |
-| `frontend-deployment.yaml` | Deployment | `kavim.azurecr.io/flone-frontend:latest` |
+| `frontend-deployment.yaml` | Deployment | `kavim.azurecr.io/kavim-frontend:latest` |
 | `frontend-service.yaml` | Service (LoadBalancer) | Public frontend access |
 
 **nginx routing (frontend container):** Static files served at `/`; `/api/*` proxied to `http://flone-backend:5000/api/` via `nginx.conf`.
 
----
 
 ## Deploy Workflow
 
@@ -132,27 +125,26 @@ az acr login --name kavim
 docker build --platform linux/amd64 -t kavim.azurecr.io/flone-backend:latest ./flone-backend
 docker push kavim.azurecr.io/flone-backend:latest
 
-docker build --platform linux/amd64 -t kavim.azurecr.io/flone-frontend:latest ./kavim-frontend
-docker push kavim.azurecr.io/flone-frontend:latest
+docker build --platform linux/amd64 -t kavim.azurecr.io/kavim-frontend:latest ./kavim-frontend
+docker push kavim.azurecr.io/kavim-frontend:latest
 ```
 
 ### Apply manifests
 ```bash
 kubectl apply -f k8s/
 kubectl rollout restart deployment/flone-backend -n kavim
-kubectl rollout restart deployment/flone-frontend -n kavim
+kubectl rollout restart deployment/kavim-frontend -n kavim
 ```
 
 ### Useful kubectl commands
 ```bash
 kubectl get pods -n kavim
 kubectl logs -n kavim deployment/flone-backend
-kubectl logs -n kavim deployment/flone-frontend
+kubectl logs -n kavim deployment/kavim-frontend
 kubectl port-forward deployment/flone-backend 5000:5000 -n kavim   # test API locally
-kubectl get service flone-frontend -n kavim                         # get public IP
+kubectl get service kavim-frontend -n kavim                         # get public IP
 ```
 
----
 
 ## Azure SQL
 
@@ -160,11 +152,6 @@ kubectl get service flone-frontend -n kavim                         # get public
 **Database:** `kavim-sql`  
 Tables are auto-created by `sequelize.sync()` on backend startup. To reset: drop all tables in dependency order (children before parents) and restart the backend.
 
----
 
 ## Important Notes
 
-- **Always build with `--platform linux/amd64`** — AKS nodes are AMD64, dev machine is ARM64 (Apple Silicon). Building without this flag produces images that fail with `no match for platform in manifest`.
-- **Never commit `k8s/backend-secret.yaml`** with real credentials to version control.
-- **FRONTEND_URL** in `backend-configmap.yaml` is set to `http://20.22.61.17` for CORS. Update this if the LoadBalancer IP changes.
-- The `flone/` directory is the original static template (reference only) — it is not deployed.

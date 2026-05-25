@@ -1,11 +1,11 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: flone-frontend
+  name: kavim-frontend
   namespace: kavim
 spec:
   selector:
-    app: flone-frontend
+    app: kavim-frontend
   ports:
     - port: 80
       targetPort: 80

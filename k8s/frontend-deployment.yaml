@@ -1,23 +1,23 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: flone-frontend
+  name: kavim-frontend
   namespace: kavim
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: flone-frontend
+      app: kavim-frontend
   template:
     metadata:
       labels:
-        app: flone-frontend
+        app: kavim-frontend
     spec:
       imagePullSecrets:
         - name: acr-secret
       containers:
-        - name: flone-frontend
-          image: kavim.azurecr.io/flone-frontend:latest
+        - name: kavim-frontend
+          image: kavim.azurecr.io/kavim-frontend:latest
           ports:
             - containerPort: 80
           resources:

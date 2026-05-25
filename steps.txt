@@ -1,0 +1,68 @@
+########################BACKEND#################
+
+Short answer — the backend is a ClusterIP service (internal). Use one of these methods to reach it:
+
+Check the service
+kubectl get svc flone-backend -n kavim
+
+This shows the cluster IP and port (internal only).
+
+Port-forward to localhost (quick, no cluster changes)
+
+kubectl port-forward svc/flone-backend 5000:5000 -n kavim
+# then open http://localhost:5000/health or your API endpoints
+
+
+Expose externally (makes a LoadBalancer — consider security)
+
+kubectl patch svc flone-backend -n kavim -p '{"spec":{"type":"LoadBalancer"}}'
+kubectl get svc flone-backend -n kavim -w
+# when EXTERNAL-IP appears, use http://<EXTERNAL-IP>:5000/
+
+
+Alternative (recommended for production): create an Ingress (or update nginx/front-end proxy) and add DNS pointing to the frontend/load‑balancer.
+Note: Inside the cluster the frontend can call the backend at http://flone-backend:5000.
+
+
+########################FRONTEND#################
+
+Use the LoadBalancer service kavim-frontend in the kavim namespace — the EXTERNAL‑IP is the public URL.
+
+Check the service and build the URL:
+
+kubectl get svc kavim-frontend -n kavim
+# URL (once EXTERNAL‑IP is set):
+# http://<EXTERNAL-IP>/
+
+
+Watch until Azure provisions the IP:
+kubectl get svc kavim-frontend -n kavim -w
+
+
+Get only the IP (one-liner):
+kubectl get svc kavim-frontend -n kavim -o jsonpath='{.status.loadBalancer.ingress[0].ip}'; echo
+
+
+If EXTERNAL‑IP stays <pending>, inspect details and events:
+kubectl describe svc kavim-frontend -n kavim
+kubectl get events -n kube-system --sort-by=.lastTimestamp | tail -n 40
+
+
+Optional (Azure): list public IPs in the resource group to find the allocated IP:
+
+Inside the cluster the frontend is reachable at http://kavim-frontend.kavim.svc.cluster.local:80.
+
+
+################BOTH####################
+kubectl get svc -n kavim || true && echo '---' && kubectl get deployment -n kavim || true && echo '---' && kubectl get pods -n kavim -o wide || true
+NAME             TYPE           CLUSTER-IP    EXTERNAL-IP     PORT(S)          AGE
+flone-backend    LoadBalancer   10.0.41.128   20.120.79.232   5000:30214/TCP   34m
+flone-frontend   LoadBalancer   10.0.39.68    20.253.12.212   80:30894/TCP     34m
+---
+NAME             READY   UP-TO-DATE   AVAILABLE   AGE
+flone-backend    1/1     1            1           34m
+flone-frontend   1/1     1            1           34m
+---
+NAME                             READY   STATUS    RESTARTS   AGE   IP             NODE                                NOMINATED NODE   READINESS GATES
+flone-backend-5c69d7d777-j5q9s   1/1     Running   0          34m   10.244.0.209   aks-nodepool1-23981560-vmss000000   <none>           <none>
+flone-frontend-7b8f466b8-88dpw   1/1     Running   0          34m   10.244.0.236   aks-nodepool1-23981560-vmss000000   <none>           <none>
