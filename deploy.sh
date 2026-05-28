@@ -19,7 +19,7 @@ function echo_header() {
 
 function usage() {
   cat <<EOF
-Usage: ./deploy.sh [--skip-build] [--skip-push]
+Usage: ./deploy.sh [--skip-build] [--skip-push] [--deploy-aci]
 
 This script builds and pushes the backend and frontend Docker images, then
 applies the Kubernetes manifests to AKS.
@@ -30,16 +30,20 @@ Environment variables:
   AKS_RESOURCE_GROUP  AKS resource group (default: kavim)
   AKS_CLUSTER         AKS cluster name (default: kavimCluster)
   NAMESPACE           Kubernetes namespace (default: kavim)
+  ACR_USERNAME        ACR username (for ACI deployment)
+  ACR_PASSWORD        ACR password (for ACI deployment)
 
 Options:
   --skip-build        Skip Docker image builds.
   --skip-push         Skip pushing images to ACR.
+  --deploy-aci        Deploy frontend to Azure Container Instances.
   --help              Show this message.
 EOF
 }
 
 SKIP_BUILD=false
 SKIP_PUSH=false
+DEPLOY_ACI=false
 
 while [[ $# -gt 0 ]]; do
   case "$1" in
@@ -49,6 +53,10 @@ while [[ $# -gt 0 ]]; do
       ;;
     --skip-push)
       SKIP_PUSH=true
+      shift
+      ;;
+    --deploy-aci)
+      DEPLOY_ACI=true
       shift
       ;;
     --help)
@@ -100,3 +108,31 @@ set -e
 echo_header "Deployment complete"
 kubectl get svc -n "$NAMESPACE"
 kubectl get deployment -n "$NAMESPACE"
+
+if [[ "$DEPLOY_ACI" = true ]]; then
+  ACR_USERNAME="${ACR_USERNAME:-kavim}"
+  ACR_PASSWORD="${ACR_PASSWORD:-}"
+
+  if [[ -z "$ACR_PASSWORD" ]]; then
+    echo_header "Fetching ACR credentials"
+    ACR_PASSWORD=$(az acr credential show --resource-group "$AKS_RESOURCE_GROUP" --name "$ACR_NAME" --query "passwords[0].value" -o tsv)
+  fi
+
+  echo_header "Deploying frontend to Azure Container Instances"
+  az container create \
+    --resource-group "$AKS_RESOURCE_GROUP" \
+    --name kavim-frontend-aci \
+    --image "$FRONTEND_IMAGE" \
+    --registry-login-server "$ACR_LOGIN_SERVER" \
+    --registry-username "$ACR_USERNAME" \
+    --registry-password "$ACR_PASSWORD" \
+    --os-type Linux \
+    --cpu 1 \
+    --memory 1 \
+    --ports 80 \
+    --dns-name-label kavim-frontend \
+    --environment-variables REACT_APP_API_URL=/api
+
+  echo_header "ACI deployment complete"
+  az container show --resource-group "$AKS_RESOURCE_GROUP" --name kavim-frontend-aci --query ipAddress.fqdn -o tsv
+fi
