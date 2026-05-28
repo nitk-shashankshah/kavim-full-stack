@@ -15,14 +15,12 @@ import currencyReducer from "./slices/currency-slice";
 import cartReducer from "./slices/cart-slice";
 import compareReducer from "./slices/compare-slice";
 import wishlistReducer from "./slices/wishlist-slice";
-import authReducer from "./slices/auth-slice";
-import orderReducer from "./slices/order-slice";
 
 const persistConfig = {
     key: "flone",
     version: 1.1,
     storage,
-    blacklist: ["product", "order"]
+    blacklist: ["product"]
 }
 
 export const rootReducer = combineReducers({
@@ -30,9 +28,7 @@ export const rootReducer = combineReducers({
     currency: currencyReducer,
     cart: cartReducer,
     compare: compareReducer,
-    wishlist: wishlistReducer,
-    auth: authReducer,
-    order: orderReducer,
+    wishlist: wishlistReducer
 });
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);

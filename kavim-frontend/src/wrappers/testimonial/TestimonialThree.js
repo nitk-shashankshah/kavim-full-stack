@@ -1,5 +1,5 @@
 
-import Swiper, { SwiperSlide } from "../../components/swiper";
+import Swiper, { SwiperSlide } from "../../components/swiper/index.jsx";
 import testimonialData from "../../data/testimonial/testimonial-three.json";
 import TestimonialThreeSingle from "../../components/testimonial/TestimonialThreeSingle.js";
 

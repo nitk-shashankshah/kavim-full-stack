@@ -91,7 +91,7 @@
   }
 }
 .logo {
-  margin-top: 32px;
+  margin-top: 10px;
   @media #{$md-layout} {
     margin-top: 0;
   }
@@ -1801,7 +1801,6 @@
     }
   }
   .logo {
-    margin-top: 22px;
     margin-bottom: 18px;
     @media #{$md-layout} {
       margin-top: 2px;

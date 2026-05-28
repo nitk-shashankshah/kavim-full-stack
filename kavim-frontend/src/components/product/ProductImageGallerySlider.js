@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 
-import Swiper, { SwiperSlide } from "../../components/swiper";
+import Swiper, { SwiperSlide } from "../swiper";
 
 const ProductImageGallerySlider = ({ product }) => {
   // swiper slider settings

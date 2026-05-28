@@ -10,7 +10,7 @@ variables:
   aksResourceGroup: 'kavim'            # set to your AKS resource group
   aksCluster: 'kavimCluster'           # set to your AKS cluster name
   aksNamespace: 'kavim'                # kubernetes namespace to deploy into
-  azureSubscription: 'nitk-shashankshah'        # update to an existing Azure DevOps service connection name
+  azureSubscription: 'nitk-shashankshah'        # must be an Azure Resource Manager (AzureRM) service connection name
 
 pool:
   vmImage: 'ubuntu-latest'

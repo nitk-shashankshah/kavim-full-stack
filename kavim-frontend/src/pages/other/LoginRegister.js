@@ -1,46 +1,13 @@
-import React, { Fragment, useState } from "react";
-import { Link, useLocation, useNavigate } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
+import React, { Fragment } from "react";
+import { Link, useLocation } from "react-router-dom"; 
 import Tab from "react-bootstrap/Tab";
 import Nav from "react-bootstrap/Nav";
 import SEO from "../../components/seo";
 import LayoutOne from "../../layouts/LayoutOne";
 import Breadcrumb from "../../wrappers/breadcrumb/Breadcrumb";
-import { loginUser, registerUser, clearAuthError } from "../../store/slices/auth-slice";
-import { syncCartFromAPI } from "../../store/slices/cart-slice";
-import { syncWishlistFromAPI } from "../../store/slices/wishlist-slice";
 
 const LoginRegister = () => {
-  const dispatch = useDispatch();
-  const navigate = useNavigate();
   let { pathname } = useLocation();
-
-  const { loading, error } = useSelector((state) => state.auth);
-
-  const [loginForm, setLoginForm] = useState({ username: "", password: "" });
-  const [registerForm, setRegisterForm] = useState({ username: "", email: "", password: "" });
-
-  const handleLoginSubmit = async (e) => {
-    e.preventDefault();
-    dispatch(clearAuthError());
-    const result = await dispatch(loginUser(loginForm));
-    if (loginUser.fulfilled.match(result)) {
-      await dispatch(syncCartFromAPI());
-      await dispatch(syncWishlistFromAPI());
-      navigate(process.env.PUBLIC_URL + "/");
-    }
-  };
-
-  const handleRegisterSubmit = async (e) => {
-    e.preventDefault();
-    dispatch(clearAuthError());
-    const result = await dispatch(registerUser(registerForm));
-    if (registerUser.fulfilled.match(result)) {
-      await dispatch(syncCartFromAPI());
-      await dispatch(syncWishlistFromAPI());
-      navigate(process.env.PUBLIC_URL + "/");
-    }
-  };
 
   return (
     <Fragment>
@@ -49,11 +16,12 @@ const LoginRegister = () => {
         description="Login page of flone react minimalist eCommerce template."
       />
       <LayoutOne headerTop="visible">
-        <Breadcrumb
+        {/* breadcrumb */}
+        <Breadcrumb 
           pages={[
-            { label: "Home", path: process.env.PUBLIC_URL + "/" },
-            { label: "Login Register", path: process.env.PUBLIC_URL + pathname }
-          ]}
+            {label: "Home", path: process.env.PUBLIC_URL + "/" },
+            {label: "Login Register", path: process.env.PUBLIC_URL + pathname }
+          ]} 
         />
         <div className="login-register-area pt-100 pb-100">
           <div className="container">
@@ -63,12 +31,12 @@ const LoginRegister = () => {
                   <Tab.Container defaultActiveKey="login">
                     <Nav variant="pills" className="login-register-tab-list">
                       <Nav.Item>
-                        <Nav.Link eventKey="login" onClick={() => dispatch(clearAuthError())}>
+                        <Nav.Link eventKey="login">
                           <h4>Login</h4>
                         </Nav.Link>
                       </Nav.Item>
                       <Nav.Item>
-                        <Nav.Link eventKey="register" onClick={() => dispatch(clearAuthError())}>
+                        <Nav.Link eventKey="register">
                           <h4>Register</h4>
                         </Nav.Link>
                       </Nav.Item>
@@ -77,24 +45,17 @@ const LoginRegister = () => {
                       <Tab.Pane eventKey="login">
                         <div className="login-form-container">
                           <div className="login-register-form">
-                            <form onSubmit={handleLoginSubmit}>
+                            <form>
                               <input
                                 type="text"
-                                name="username"
+                                name="user-name"
                                 placeholder="Username"
-                                value={loginForm.username}
-                                onChange={(e) => setLoginForm({ ...loginForm, username: e.target.value })}
-                                required
                               />
                               <input
                                 type="password"
-                                name="password"
+                                name="user-password"
                                 placeholder="Password"
-                                value={loginForm.password}
-                                onChange={(e) => setLoginForm({ ...loginForm, password: e.target.value })}
-                                required
                               />
-                              {error && <p style={{ color: "red", margin: "8px 0" }}>{error}</p>}
                               <div className="button-box">
                                 <div className="login-toggle-btn">
                                   <input type="checkbox" />
@@ -103,8 +64,8 @@ const LoginRegister = () => {
                                     Forgot Password?
                                   </Link>
                                 </div>
-                                <button type="submit" disabled={loading}>
-                                  <span>{loading ? "Logging in..." : "Login"}</span>
+                                <button type="submit">
+                                  <span>Login</span>
                                 </button>
                               </div>
                             </form>
@@ -114,35 +75,25 @@ const LoginRegister = () => {
                       <Tab.Pane eventKey="register">
                         <div className="login-form-container">
                           <div className="login-register-form">
-                            <form onSubmit={handleRegisterSubmit}>
+                            <form>
                               <input
                                 type="text"
-                                name="username"
+                                name="user-name"
                                 placeholder="Username"
-                                value={registerForm.username}
-                                onChange={(e) => setRegisterForm({ ...registerForm, username: e.target.value })}
-                                required
                               />
                               <input
                                 type="password"
-                                name="password"
+                                name="user-password"
                                 placeholder="Password"
-                                value={registerForm.password}
-                                onChange={(e) => setRegisterForm({ ...registerForm, password: e.target.value })}
-                                required
                               />
                               <input
-                                name="email"
+                                name="user-email"
                                 placeholder="Email"
                                 type="email"
-                                value={registerForm.email}
-                                onChange={(e) => setRegisterForm({ ...registerForm, email: e.target.value })}
-                                required
                               />
-                              {error && <p style={{ color: "red", margin: "8px 0" }}>{error}</p>}
                               <div className="button-box">
-                                <button type="submit" disabled={loading}>
-                                  <span>{loading ? "Registering..." : "Register"}</span>
+                                <button type="submit">
+                                  <span>Register</span>
                                 </button>
                               </div>
                             </form>

@@ -1,5 +1,5 @@
 import { EffectFade } from 'swiper';
-import Swiper, { SwiperSlide } from "../../components/swiper";
+import Swiper, { SwiperSlide } from "../../components/swiper/index.jsx";
 import heroSliderData from "../../data/hero-sliders/hero-slider-thirty-six.json";
 import HeroSliderThirtySixSingle from "../../components/hero-slider/HeroSliderThirtySixSingle.js";
 

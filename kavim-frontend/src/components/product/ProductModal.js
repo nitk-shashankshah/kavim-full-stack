@@ -4,7 +4,7 @@ import { EffectFade, Thumbs } from 'swiper';
 import { Modal } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import Rating from "./sub-components/ProductRating";
-import Swiper, { SwiperSlide } from "../../components/swiper";
+import Swiper, { SwiperSlide } from "../swiper";
 import { getProductCartQuantity } from "../../helpers/product";
 import { addToCart } from "../../store/slices/cart-slice";
 import { addToWishlist } from "../../store/slices/wishlist-slice";
@@ -15,20 +15,14 @@ function ProductModal({ product, currency, discountedPrice, finalProductPrice, f
   const dispatch = useDispatch();
   const { cartItems } = useSelector((state) => state.cart);
 
-  const hasVariation = product && Array.isArray(product.variation) && product.variation.length > 0;
-  const firstVariation = hasVariation ? product.variation[0] : null;
-  const firstSize = firstVariation && Array.isArray(firstVariation.size) && firstVariation.size.length > 0
-    ? firstVariation.size[0]
-    : null;
-
   const [selectedProductColor, setSelectedProductColor] = useState(
-    firstVariation ? firstVariation.color || "" : ""
+    product.variation ? product.variation[0].color : ""
   );
   const [selectedProductSize, setSelectedProductSize] = useState(
-    firstSize ? firstSize.name || "" : ""
+    product.variation ? product.variation[0].size[0].name : ""
   );
   const [productStock, setProductStock] = useState(
-    firstSize ? firstSize.stock : (product && product.stock) || 0
+    product.variation ? product.variation[0].size[0].stock : product.stock
   );
   const [quantityCount, setQuantityCount] = useState(1);
   const productCartQty = getProductCartQuantity(
@@ -161,11 +155,11 @@ function ProductModal({ product, currency, discountedPrice, finalProductPrice, f
                                 : ""
                             }
                             onChange={() => {
-                                setSelectedProductColor(single.color);
-                                setSelectedProductSize(single.size && single.size[0] ? single.size[0].name : "");
-                                setProductStock(single.size && single.size[0] ? single.size[0].stock : product.stock);
-                                setQuantityCount(1);
-                              }}
+                              setSelectedProductColor(single.color);
+                              setSelectedProductSize(single.size[0].name);
+                              setProductStock(single.size[0].stock);
+                              setQuantityCount(1);
+                            }}
                           />
                           <span className="checkmark"></span>
                         </label>
@@ -179,7 +173,7 @@ function ProductModal({ product, currency, discountedPrice, finalProductPrice, f
                     {product.variation &&
                       product.variation.map(single => {
                         return single.color === selectedProductColor
-                          ? (single.size || []).map((singleSize, key) => {
+                          ? single.size.map((singleSize, key) => {
                               return (
                                 <label
                                   className={`pro-details-size-content--single`}

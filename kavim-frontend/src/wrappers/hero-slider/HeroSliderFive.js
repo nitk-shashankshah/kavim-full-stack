@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import clsx from "clsx";
 import { EffectFade } from 'swiper';
-import Swiper, { SwiperSlide } from "../../components/swiper";
+import Swiper, { SwiperSlide } from "../../components/swiper/index.jsx";
 import sliderData from "../../data/hero-sliders/hero-slider-five.json";
 import HeroSliderFiveSingle from "../../components/hero-slider/HeroSliderFiveSingle.js";
 
