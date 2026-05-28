@@ -129,7 +129,7 @@ if [[ "$DEPLOY_ACI" = true ]]; then
     --os-type Linux \
     --cpu 1 \
     --memory 1 \
-    --ports 80 \
+    --ports 80 443 \
     --dns-name-label kavim-frontend \
     --environment-variables REACT_APP_API_URL=/api
 
