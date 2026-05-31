@@ -113,21 +113,9 @@
         "image": "/assets/img/product/Aurelia/Cat 01.png",
         "size": [
           {
-            "name": "x",
-            "stock": 3
-          },
-          {
-            "name": "m",
-            "stock": 5
-          },
-          {
-            "name": "xl",
-            "stock": 4
-          },
-          {
-            "name": "xxl",
-            "stock": 2
-          }
+            "name": "Regular",
+            "stock": 1
+          }          
         ]
       },
       {
@@ -135,43 +123,9 @@
         "image": "/assets/img/product/Aurelia/Cat 02.png",
         "size": [
           {
-            "name": "x",
-            "stock": 3
-          },
-          {
-            "name": "m",
-            "stock": 5
-          },
-          {
-            "name": "xl",
-            "stock": 4
-          },
-          {
-            "name": "xxl",
-            "stock": 2
-          }
-        ]
-      },
-      {
-        "color": "multi",
-        "image": "/assets/img/product/Aurelia/M.png",
-        "size": [
-          {
-            "name": "x",
-            "stock": 3
-          },
-          {
-            "name": "m",
-            "stock": 5
-          },
-          {
-            "name": "xl",
-            "stock": 4
-          },
-          {
-            "name": "xxl",
-            "stock": 2
-          }
+            "name": "Regular",
+            "stock": 1
+          }          
         ]
       }
     ],
@@ -180,7 +134,7 @@
       "/assets/img/product/Aurelia/ProInfo.png"
     ],
     "shortDescription": "Aurelia Handcrafted, premium-quality product ideal for home.",
-    "fullDescription": "Aurelia: Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit."
+    "fullDescription": "Aurelia: premium-quality product ideal for home."
   },
   {
     "id": "3",
